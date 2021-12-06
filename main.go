@@ -44,9 +44,6 @@ func SendEmail(message Message) (string, error) {
 	from := os.Getenv("EMAIL")
 	password := os.Getenv("PASSWORD")
 
-	fmt.Println(from)
-	fmt.Println(password)
-
 	// Receiver email address.
 	// to := []string{
 	// 	"email@example.com",
@@ -55,7 +52,6 @@ func SendEmail(message Message) (string, error) {
 		message.Reciever,
 	}
 
-	fmt.Printf("%#v", message)
 	// smtp server configuration.
 	smtpHost := "smtp.gmail.com"
 	smtpPort := "587"
